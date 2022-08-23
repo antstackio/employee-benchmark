@@ -1,0 +1,4 @@
+[build]
+    publish = "./dist"
+    command = "( pnpm run build  || npm install pnpm ) && pnpm i --no-frozen-lockfile --legacy-deps  && pnpm run build"
+
