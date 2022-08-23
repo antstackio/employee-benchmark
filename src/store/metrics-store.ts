@@ -32,6 +32,9 @@ const store = createStore({
       const index = payload.index || 0;
       state.metrics[index].name = payload.name;
     },
+    initializeState(state, payload) {
+      state.metrics = payload;
+    },
   },
   getters: {
     getScoreOfSet(state, index = 0) {

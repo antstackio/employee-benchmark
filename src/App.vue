@@ -6,11 +6,23 @@ import { themeClass } from "./styles/theme.css";
 import FormLayout from "./layouts/FormLayout.vue";
 import RadarChart from "./components/charts/RadarChart.vue";
 import { useStore } from "vuex";
-import { computed } from "vue";
+import { computed, onMounted, reactive } from "vue";
 import { axes } from "./definitions/employee-metrics";
 import LevelSelector from "./components/inputs/LevelSelector.vue";
+import { constructQuery, parseQuery } from "./utils/query-params";
 
 const store = useStore();
+const shareAbleUrl = reactive({ url: "" });
+onMounted(() => {
+  const queryState = parseQuery();
+  console.log(queryState);
+  store.commit("initializeState", queryState);
+});
+const testFn = () => {
+  console.log(constructQuery(store.state.metrics));
+  const constructedUrl = constructQuery(store.state.metrics);
+  shareAbleUrl.url = encodeURI(constructedUrl.href);
+};
 </script>
 
 <template>
@@ -19,7 +31,11 @@ const store = useStore();
       <div>
         <LevelSelector />
       </div>
-      <RadarChart />
+      <div>
+        <button @click="testFn">Share</button>
+        {{ shareAbleUrl.url }}
+        <RadarChart />
+      </div>
     </FormLayout>
   </div>
 </template>
