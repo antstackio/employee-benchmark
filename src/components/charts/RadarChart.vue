@@ -36,13 +36,20 @@ ChartJS.register(
   LineElement,
   Filler
 );
+const metrics = computed(() => {
+  return store.state.metrics;
+});
 const chartData = computed(() => {
   return {
     labels: Object.values(axes),
-    datasets: constructDataSet(
-      store.getters.getNameOfSet,
-      store.getters.getScoreOfSet
-    ) as any,
+    datasets: store.state.metrics.map(
+      (metric: any, index: number) =>
+        constructDataSet(
+          store.getters.getNameOfSet(index),
+          store.getters.getScoreOfSet(index),
+          index
+        ) as any
+    ),
   };
 });
 const chartOptions = {

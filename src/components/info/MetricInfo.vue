@@ -6,7 +6,7 @@ import { employeeMetrics, axes } from "../../definitions/employee-metrics";
 
 const store = useStore();
 
-const scoreOfSet = computed(() => store.getters.getScoreOfSet);
+const scoreOfSet = computed(() => store.getters.getScoreOfSet());
 </script>
 
 <template>

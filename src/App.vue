@@ -11,12 +11,13 @@ import { axes } from "./definitions/employee-metrics";
 import LevelSelector from "./components/inputs/LevelSelector.vue";
 import { constructQuery, parseQuery } from "./utils/query-params";
 import MetricInfo from "./components/info/MetricInfo.vue";
+import SetSelector from "./components/inputs/SetSelector.vue";
 
 const store = useStore();
 const shareAbleUrl = reactive({ url: "" });
 onMounted(() => {
   const queryState = parseQuery();
-  console.log(queryState);
+
   store.commit("initializeState", queryState);
 });
 const testFn = () => {
@@ -40,6 +41,7 @@ const copyToClipboard = (str: string) => {
   <div :class="themeClass">
     <FormLayout>
       <div>
+        <SetSelector />
         <LevelSelector />
       </div>
       <div>

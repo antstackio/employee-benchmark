@@ -42,3 +42,44 @@ export const levelSelectorButtonContainer = style({
     },
   },
 });
+export const setSelectorButtonContainer = style({
+  display: "flex",
+  gap: "4px",
+  flexWrap: "wrap",
+  "@media": {
+    [breakpoints.laptop]: {
+      gap: "30px",
+    },
+  },
+});
+export const setSelectorClass = style({
+  border: 0,
+  padding: "",
+  fontSize: themeVars.fontSizes.med,
+  background: "none",
+  borderRadius: 0,
+  outline: "none",
+  transition: "all 0.2s ease-in-out",
+  borderBottom: `1px solid transparent`,
+  ":hover": {
+    borderBottom: `1px solid ${themeVars.colors.activeTechnology}`,
+  },
+});
+
+export const activeSetClass = style({
+  borderBottom: `1px solid ${themeVars.colors.activeProcess}`,
+});
+
+export const addMoreButton = style({
+  border: 0,
+  padding: "",
+  fontSize: themeVars.fontSizes.med,
+  background: "none",
+  borderRadius: 0,
+  outline: "none",
+  transition: "all 0.2s ease-in-out",
+  borderBottom: `1px solid transparent`,
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+});

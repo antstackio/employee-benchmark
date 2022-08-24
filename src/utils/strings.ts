@@ -13,18 +13,31 @@ export const hyphenToSpaceSeperatedTitle = (str: string) => {
   return toTitleCase(str);
 };
 
-export const constructDataSet = (label: string, data: any) => {
-  return [
-    {
-      label,
-      fill: true,
-      backgroundColor: "rgba(255, 99, 132, 0.2)",
-      borderColor: "rgb(255, 99, 132)",
-      pointBackgroundColor: "rgb(255, 99, 132)",
-      pointBorderColor: "#fff",
-      pointHoverBackgroundColor: "#fff",
-      pointHoverBorderColor: "rgb(255, 99, 132)",
-      data: data,
-    },
-  ];
+const colorSet = [
+  {
+    background: "rgba(255, 99, 132, 0.2)",
+    borderColor: "rgb(255, 99, 132)",
+  },
+  {
+    background: "rgba(99, 255, 132, 0.2)",
+    borderColor: "rgb(99, 255, 132)",
+  },
+  {
+    background: "rgba(99, 132, 255, 0.2)",
+    borderColor: "rgb(99, 132, 255)",
+  },
+];
+
+export const constructDataSet = (label: string, data: any, index = 0) => {
+  return {
+    label,
+    fill: true,
+    backgroundColor: colorSet[index].background,
+    borderColor: colorSet[index].borderColor,
+    pointBackgroundColor: colorSet[index].borderColor,
+    pointBorderColor: "#fff",
+    pointHoverBackgroundColor: "#fff",
+    pointHoverBorderColor: colorSet[index].borderColor,
+    data: data,
+  };
 };

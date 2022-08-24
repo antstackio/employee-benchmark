@@ -14,8 +14,8 @@ const store = useStore();
 const assignScoreToLevel = (level: number, metric: axes) => {
   store.commit("setMetricValue", { metric, value: level });
 };
-const scoreOfSet = computed(() => store.getters.getScoreOfSet);
-const nameOfSet = computed(() => store.getters.getNameOfSet);
+const scoreOfSet = computed(() => store.getters.getScoreOfSet());
+const nameOfSet = computed(() => store.getters.getNameOfSet());
 </script>
 
 <template>
