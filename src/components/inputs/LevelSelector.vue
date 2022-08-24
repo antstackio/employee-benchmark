@@ -15,9 +15,19 @@ const assignScoreToLevel = (level: number, metric: axes) => {
   store.commit("setMetricValue", { metric, value: level });
 };
 const scoreOfSet = computed(() => store.getters.getScoreOfSet);
+const nameOfSet = computed(() => store.getters.getNameOfSet);
 </script>
 
 <template>
+  <input
+    placeholder="Name of Set"
+    :class="levelHeading"
+    type="text"
+    :value="nameOfSet"
+    @input="
+      (event) => store.commit('setMetricName', { name: event.target.value })
+    "
+  />
   <div
     v-for="(employeeMetric, index) in Object.keys(axes)"
     :key="axes[employeeMetric as  keyof typeof axes]"
@@ -43,4 +53,8 @@ const scoreOfSet = computed(() => store.getters.getScoreOfSet);
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+input {
+  display: block;
+}
+</style>

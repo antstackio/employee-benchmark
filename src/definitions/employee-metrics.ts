@@ -59,23 +59,23 @@ export const technologyLevels: ILevels[] = [
   },
 ];
 export const technologyLevelsMeta: Record<ILevels["title"], IMeta> = {
-  [technologyLevels[0].title]: {
+  [technologyLevels[0].level]: {
     description:
       "actively learns and adopts the technology and tools defined by the team",
   },
-  [technologyLevels[1].title]: {
+  [technologyLevels[1].level]: {
     description:
       "is the go-to person for one or more technologies and takes initiative to learn new ones",
   },
-  [technologyLevels[2].title]: {
+  [technologyLevels[2].level]: {
     description:
       "researches, creates proofs of concept and introduces new technologies to the team",
   },
-  [technologyLevels[3].title]: {
+  [technologyLevels[3].level]: {
     description:
       "has very deep knowledge about the whole technology stack of the system",
   },
-  [technologyLevels[4].title]: {
+  [technologyLevels[4].level]: {
     description:
       "designs and creates new technologies that are widely used either by internal or external teams",
   },
@@ -105,23 +105,23 @@ export const systemLevels: ILevels[] = [
 ];
 
 export const systemLevelsMeta: Record<ILevels["title"], IMeta> = {
-  [systemLevels[0].title]: {
+  [systemLevels[0].level]: {
     description:
       "successfully pushes new features and bug fixes to improve and extend the system",
   },
-  [systemLevels[1].title]: {
+  [systemLevels[1].level]: {
     description:
       "designs and implements medium to large size features while reducing the system’s tech debt",
   },
-  [systemLevels[2].title]: {
+  [systemLevels[2].level]: {
     description:
       "owns the production operation and monitoring of the system and is aware of its SLAs",
   },
-  [systemLevels[3].title]: {
+  [systemLevels[3].level]: {
     description:
       "evolves the architecture to support future requirements and defines its SLAs",
   },
-  [systemLevels[4].title]: {
+  [systemLevels[4].level]: {
     description:
       "leads the technical excellence of the system and creates plans to mitigate outages",
   },
@@ -197,67 +197,67 @@ export const influenceLevels: ILevels[] = [
 ];
 
 export const peopleLevelsMeta: Record<ILevels["title"], IMeta> = {
-  [peopleLevels[0].title]: {
+  [peopleLevels[0].level]: {
     description:
       "quickly learns from others and consistently steps up when it is required",
   },
-  [peopleLevels[1].title]: {
+  [peopleLevels[1].level]: {
     description:
       "proactively supports other team members and helps them to be successful",
   },
-  [peopleLevels[2].title]: {
+  [peopleLevels[2].level]: {
     description:
       "mentors others to accelerate their career-growth and encourages them to participate",
   },
-  [peopleLevels[3].title]: {
+  [peopleLevels[3].level]: {
     description:
       "coordinates team members providing effective feedback and moderating discussions",
   },
-  [peopleLevels[4].title]: {
+  [peopleLevels[4].level]: {
     description:
       "manages the team members’ career, expectations, performance and level of happiness",
   },
 };
 
 export const processLevelsMeta: Record<ILevels["title"], IMeta> = {
-  [processLevels[0].title]: {
+  [processLevels[0].level]: {
     description:
       "follows the team processes, delivering a consistent flow of features to production",
   },
-  [processLevels[1].title]: {
+  [processLevels[1].level]: {
     description:
       "enforces the team processes, making sure everybody understands the benefits and tradeoffs",
   },
-  [processLevels[2].title]: {
+  [processLevels[2].level]: {
     description:
       "challenges the team processes, looking for ways to improve them",
   },
-  [processLevels[3].title]: {
+  [processLevels[3].level]: {
     description:
       "adjusts the team processes, listening to feedback and guiding the team through the changes",
   },
-  [processLevels[4].title]: {
+  [processLevels[4].level]: {
     description:
       "defines the right processes for the team’s maturity level, balancing agility and discipline",
   },
 };
 
 export const influenceLevelsMeta: Record<ILevels["title"], IMeta> = {
-  [influenceLevels[0].title]: {
+  [influenceLevels[0].level]: {
     description: "makes an impact on one or more subsystems",
   },
-  [influenceLevels[1].title]: {
+  [influenceLevels[1].level]: {
     description:
       "makes an impact on the whole team, not just on specific parts of it",
   },
-  [influenceLevels[2].title]: {
+  [influenceLevels[2].level]: {
     description:
       "makes an impact not only his/her team but also on other teams",
   },
-  [influenceLevels[3].title]: {
+  [influenceLevels[3].level]: {
     description: "makes an impact on the whole tech organization",
   },
-  [influenceLevels[4].title]: {
+  [influenceLevels[4].level]: {
     description: "makes an impact on the tech community",
   },
 };

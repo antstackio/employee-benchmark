@@ -17,13 +17,13 @@ export const constructDataSet = (label: string, data: any) => {
   return [
     {
       label,
-      backgroundColor: "rgba(179,181,198,0.2)",
-      borderColor: "rgba(179,181,198,1)",
-      pointBackgroundColor: "rgba(179,181,198,1)",
-      pointBorderColor: "#fff",
       fill: true,
+      backgroundColor: "rgba(255, 99, 132, 0.2)",
+      borderColor: "rgb(255, 99, 132)",
+      pointBackgroundColor: "rgb(255, 99, 132)",
+      pointBorderColor: "#fff",
       pointHoverBackgroundColor: "#fff",
-      pointHoverBorderColor: "rgba(179,181,198,1)",
+      pointHoverBorderColor: "rgb(255, 99, 132)",
       data: data,
     },
   ];

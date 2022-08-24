@@ -1,0 +1,4 @@
+import { style } from "@vanilla-extract/css";
+export const metricInfoClass = style({
+  padding: "0.5em",
+});

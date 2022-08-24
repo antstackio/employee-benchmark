@@ -35,6 +35,7 @@ export const levelHeading = style({
 export const levelSelectorButtonContainer = style({
   display: "flex",
   gap: "15px",
+  flexWrap: "wrap",
   "@media": {
     [breakpoints.laptop]: {
       gap: "30px",
