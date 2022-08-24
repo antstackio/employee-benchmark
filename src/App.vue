@@ -46,11 +46,15 @@ const copyToClipboard = (str: string) => {
         <button @click="testFn">Share</button>
         <!-- <p @click="copyToClipboard(shareAbleUrl.url)">{{ shareAbleUrl.url }}</p> -->
         <p v-if="shareAbleUrl.url"><small>COPIED TO CLIPBOARD</small></p>
-        <RadarChart />
+        <RadarChart css-classes="radar-class" />
         <MetricInfo />
       </div>
     </FormLayout>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.radar-class {
+  color: white;
+}
+</style>

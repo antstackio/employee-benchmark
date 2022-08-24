@@ -40,7 +40,7 @@ const chartData = computed(() => {
   return {
     labels: Object.values(axes),
     datasets: constructDataSet(
-      props.label || "",
+      store.getters.getNameOfSet,
       store.getters.getScoreOfSet
     ) as any,
   };
@@ -48,29 +48,54 @@ const chartData = computed(() => {
 const chartOptions = {
   responsive: true,
   maintainAspectRatio: false,
+  backgroundColor: "#242424",
   scales: {
     r: {
+      backgroundColor: "#242424",
       ticks: {
         display: false,
         stepSize: 1,
+        fontSize: "32",
+      },
+      grid: {
+        lineWidth: 2,
+        color: "rgba(255, 255, 255,.6)",
+      },
+      pointLabels: {
+        backdropColor: "#242424",
+        color: "rgba(255, 255, 255,.6)",
+        font: {
+          size: 18,
+        },
       },
       suggestedMin: 0,
       suggestedMax: 5,
     },
   },
+  elements: {
+    line: {
+      borderWidth: 3,
+    },
+  },
 };
 </script>
 <template>
-  <Radar
-    :chart-data="chartData"
-    :chart-options="chartOptions"
-    :chart-id="props.chartId"
-    :width="props.width"
-    :height="props.height"
-    :css-classes="props.cssClasses"
-    :styles="props.styles"
-    :plugins="props.plugins"
-  ></Radar>
+  <div class="radar-background">
+    <Radar
+      :chart-data="chartData"
+      :chart-options="chartOptions"
+      :chart-id="props.chartId"
+      :width="props.width"
+      :height="props.height"
+      :css-classes="props.cssClasses"
+      :styles="props.styles"
+      :plugins="props.plugins"
+    ></Radar>
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.radar-background {
+  background-color: #242424;
+}
+</style>

@@ -61,4 +61,9 @@ const scoreOfSet = computed(() => store.getters.getScoreOfSet);
   </ul>
 </template>
 
-<style scoped></style>
+<style scoped>
+ul,
+li {
+  color: var(--color-font);
+}
+</style>

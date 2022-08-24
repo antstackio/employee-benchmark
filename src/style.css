@@ -1,4 +1,6 @@
 :root {
+  --color-font: "rgba(255, 255, 255,.6)";
+  --color-background: "#242424";
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -69,6 +71,8 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
+    --color-font: "#213547";
+    --color-background: "#ffffff";
     color: #213547;
     background-color: #ffffff;
   }
