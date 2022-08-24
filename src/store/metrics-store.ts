@@ -28,7 +28,6 @@ const store = createStore({
     },
     setMetricName(state, payload: { index?: number; name: string }) {
       const index = payload.index || state.selectedIndex;
-      console.log("change", index);
 
       state.metrics[index].name = payload.name;
     },
@@ -55,8 +54,6 @@ const store = createStore({
     getNameOfSet:
       (state) =>
       (index = state.selectedIndex) => {
-        console.log(index);
-
         return state.metrics[index || state.selectedIndex].name;
       },
   },

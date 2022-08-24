@@ -21,7 +21,6 @@ onMounted(() => {
   store.commit("initializeState", queryState);
 });
 const testFn = () => {
-  console.log(constructQuery(store.state.metrics));
   const constructedUrl = constructQuery(store.state.metrics);
   shareAbleUrl.url = encodeURI(constructedUrl.href);
   copyToClipboard(shareAbleUrl.url);
