@@ -25,7 +25,7 @@ const nameOfSet = computed(() => store.getters.getNameOfSet);
     type="text"
     :value="nameOfSet"
     @input="
-      (event) => store.commit('setMetricName', { name: event.target.value })
+      (event:any) => store.commit('setMetricName', { name: event.target.value })
     "
   />
   <div
