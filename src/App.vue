@@ -44,7 +44,9 @@ const copyToClipboard = (str: string) => {
         <LevelSelector />
       </div>
       <div>
-        <button @click="testFn">Share</button>
+        <div class="action-button-container">
+          <button @click="testFn">Share</button>
+        </div>
         <!-- <p @click="copyToClipboard(shareAbleUrl.url)">{{ shareAbleUrl.url }}</p> -->
         <p v-if="shareAbleUrl.url"><small>COPIED TO CLIPBOARD</small></p>
         <RadarChart css-classes="radar-class" />
@@ -57,5 +59,10 @@ const copyToClipboard = (str: string) => {
 <style scoped>
 .radar-class {
   color: white;
+}
+.action-button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 12px;
 }
 </style>

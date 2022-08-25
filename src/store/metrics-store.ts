@@ -41,6 +41,7 @@ const store = createStore({
       const newSetdata = payload.data || { ...INITIAL_SET_DATA };
 
       state.metrics = [...state.metrics, newSetdata];
+      state.selectedIndex = state.metrics.length - 1;
     },
   },
   getters: {

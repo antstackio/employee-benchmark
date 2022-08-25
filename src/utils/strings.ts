@@ -26,18 +26,34 @@ const colorSet = [
     background: "rgba(99, 132, 255, 0.2)",
     borderColor: "rgb(99, 132, 255)",
   },
+  {
+    background: "rgba(146, 84, 200, 0.2)",
+    borderColor: "rgb(146, 84, 200)",
+  },
+  {
+    background: "rgba(247, 236, 9, 0.2)",
+    borderColor: "rgb(247, 236, 9)",
+  },
+  {
+    background: "rgba(255, 99, 99, 0.2)",
+    borderColor: "rgb(255, 99, 99)",
+  },
+  {
+    background: "rgba(0, 189, 170, 0.2)",
+    borderColor: "rgb(0, 189, 170)",
+  },
 ];
 
 export const constructDataSet = (label: string, data: any, index = 0) => {
   return {
     label,
     fill: true,
-    backgroundColor: colorSet[index].background,
-    borderColor: colorSet[index].borderColor,
-    pointBackgroundColor: colorSet[index].borderColor,
+    backgroundColor: colorSet[index % 7].background,
+    borderColor: colorSet[index % 7].borderColor,
+    pointBackgroundColor: colorSet[index % 7].borderColor,
     pointBorderColor: "#fff",
     pointHoverBackgroundColor: "#fff",
-    pointHoverBorderColor: colorSet[index].borderColor,
+    pointHoverBorderColor: colorSet[index % 7].borderColor,
     data: data,
   };
 };
