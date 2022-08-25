@@ -22,7 +22,7 @@ onMounted(() => {
 });
 const testFn = () => {
   const constructedUrl = constructQuery(store.state.metrics);
-  shareAbleUrl.url = encodeURI(constructedUrl.href);
+  shareAbleUrl.url = constructedUrl.href;
   copyToClipboard(shareAbleUrl.url);
 };
 const copyToClipboard = (str: string) => {
